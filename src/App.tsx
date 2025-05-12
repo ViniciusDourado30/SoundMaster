@@ -1,18 +1,20 @@
 import { Outlet } from 'react-router'
 import SideBar from './components/SideBar'
 import './index.css'
+import Header from './components/Header'
 
 function App() {
-
   return (
-    <div className='h-full min-h-screen flex gap-4'>
+    <div className='h-full min-h-screen flex'>
+      <nav>
+        <Header/>
+      </nav>
       <aside>
-        <SideBar />
+        <SideBar/>
       </aside>
-      <main>
-        <Outlet />
+      <main className='w-full'>
+        <Outlet/>
       </main>
-
     </div>
   )
 }
