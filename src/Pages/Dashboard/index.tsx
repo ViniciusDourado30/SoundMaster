@@ -1,8 +1,12 @@
-const Dashboard = () => {
-    
+import AlbumCard from "./AlbumCard"
+
+const Dashboard = () => {    
     return(
-        <div className="h-full bg-[#121212] p-10">
-            <div className="w-28 h-28 rounded bg-cover"></div>;
+        <div className="h-full bg-[#121212] p-10 flex">
+            <section className="w-full">
+                <label className="text-1xl font-bold uppercase text-[#eaeaea]">Trending</label>
+                <AlbumCard/>
+            </section>
         </div>
     )
 }
