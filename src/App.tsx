@@ -5,7 +5,7 @@ import Header from './components/Header'
 
 function App() {
   return (
-    <div className='h-full min-h-screen flex'>
+    <div className='h-full min-h-screen flex overflow-hidden'>
       <nav>
         <Header/>
       </nav>
