@@ -1,4 +1,4 @@
-export interface TrendingPlaylist{
+export interface Album{
     id: string,
     artwork: {
         '150x150'?: string,
