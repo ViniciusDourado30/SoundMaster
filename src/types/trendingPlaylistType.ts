@@ -1,3 +1,5 @@
+import type { playlistContent } from "./playlistContent"
+
 export interface Album{
     id: string,
     artwork: {
@@ -7,4 +9,5 @@ export interface Album{
     }
     description: string,
     playlist_name: string,
+    playlist_contents: playlistContent[],
 }
