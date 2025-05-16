@@ -1,4 +1,3 @@
-import type { TrendingPlaylist } from "../types/trendingPlaylistType";
 import audiusAPI from "./api/axiosInstanceAudiusAPI"
 
 export const PlaylistService = {
