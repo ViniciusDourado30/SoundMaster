@@ -1,4 +1,3 @@
-import audiusAPI from "./api/axiosInstanceAudiusAPI"
 import discoveryProviderAudiusAPI from "./api/axiosInstanceDiscoveryProviderAudius";
 
 export const TrackService = {
