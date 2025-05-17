@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router";
+import { useNavigate     } from "react-router";
 import type { Album } from "../../../types/trendingPlaylistType";
 
 interface AlbumCardProp{
@@ -10,7 +10,7 @@ const AlbumCard = ({album} : AlbumCardProp) => {
     const navigate = useNavigate();
 
     const handleSubmit = () => {
-        navigate("/playlist");
+        navigate("/playlist", {state: { album }});
     }
 
         return(
