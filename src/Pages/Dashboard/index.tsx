@@ -1,5 +1,4 @@
 import { PlaylistService } from "../../services/playlistService"
-import AlbumCard from "./AlbumCard"
 import AlbumSection from "./AlbumSection"
 
 const Dashboard = () => {    
