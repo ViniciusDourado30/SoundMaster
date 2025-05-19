@@ -1,11 +1,26 @@
 import { useLocation } from "react-router";
 import SideBarRight from "../../components/SideBarRight";
-import type { Album } from "../../types/trendingPlaylistType";
+import type { Album } from "../../types/albumType";
+import MusicCard from "./MusicCard";
+import { useEffect, useState } from "react";
+import { TrackService } from "../../services/trackServices";
+import type { musicType } from "../../types/musicType";
 
 const PlaylistPage = () => {
 
      const location = useLocation();
      const albumData = location.state.album as Album;
+
+     const [Tracks, setTracks] = useState<musicType[]>([]);
+
+    useEffect(() => {
+        const getData = async () => {
+            const data = await TrackService.getTracksByPlaylist(albumData.playlist_contents);
+            setTracks(data);
+            console.log(data);
+        }
+        getData();
+    }, []);
 
     return(
          <div className="h-full bg-[#121212] flex">
@@ -18,6 +33,11 @@ const PlaylistPage = () => {
                     <h1 className="text-4xl font-bold text-white uppercase">{albumData.playlist_name}</h1>
                     {albumData.description !== "" ? (<p className="text-sm font-extralight text-[#eaeaea]">{albumData.description}</p>) : (<p className="">Não Existe Descrição</p>)}
                 </div>
+            </section>
+            <section className="w-full h-full p-5 overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-transparent flex flex-col gap-4">
+                {Tracks && Tracks.map((tracks) => {
+                   return <MusicCard key={tracks.id} data={tracks}/> 
+                })}
             </section>
             </main>
             <aside>
