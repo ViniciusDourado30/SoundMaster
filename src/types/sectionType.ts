@@ -1,4 +1,4 @@
-import type { Album } from "./trendingPlaylistType";
+import type { Album } from "./albumType";
 
 export interface SectionType{
     title: string,
