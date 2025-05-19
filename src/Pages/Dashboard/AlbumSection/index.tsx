@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { Album } from "../../../types/trendingPlaylistType";
+import type { Album } from "../../../types/albumType";
 import type { SectionType } from "../../../types/sectionType";
 import AlbumCard from "../AlbumCard";
 

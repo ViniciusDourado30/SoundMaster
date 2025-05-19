@@ -1,5 +1,5 @@
 import { useNavigate     } from "react-router";
-import type { Album } from "../../../types/trendingPlaylistType";
+import type { Album } from "../../../types/albumType";
 
 interface AlbumCardProp{
     album: Album,
